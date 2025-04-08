@@ -1,6 +1,18 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// *** Add CORS policy ***
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowWebApp",
+                      policy  =>
+                      {
+                          policy.WithOrigins("http://localhost:5173") // Allow the Vite dev server
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                      });
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -15,6 +27,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// *** Use CORS policy ***
+// IMPORTANT: Must be called after UseRouting (implicitly done by builder.Build()) and before UseAuthorization/UseEndpoints (or Map... methods)
+app.UseCors("AllowWebApp"); 
 
 var summaries = new[]
 {
