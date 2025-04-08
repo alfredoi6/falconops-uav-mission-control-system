@@ -1,5 +1,9 @@
 namespace FalconOps.API.Services.Simulator;
 
+/// <summary>
+/// A background service that runs the UAV telemetry simulator periodically.
+/// It orchestrates the simulation loop, publishing and logging data at regular intervals.
+/// </summary>
 public class SimulatorHostedService : BackgroundService
 {
     private readonly TelemetrySimulator _simulator;

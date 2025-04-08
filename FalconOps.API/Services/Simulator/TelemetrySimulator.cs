@@ -1,5 +1,9 @@
 namespace FalconOps.API.Services.Simulator;
 
+/// <summary>
+/// Simulates the flight of a UAV and generates telemetry data.
+/// It manages the UAV's state and uses a navigator to update its position based on waypoints.
+/// </summary>
 public class TelemetrySimulator
 {
     private readonly IWaypointNavigator _navigator;

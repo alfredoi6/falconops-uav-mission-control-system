@@ -1,5 +1,9 @@
-﻿namespace FalconOps.API.Services.Simulator;
+namespace FalconOps.API.Services.Simulator;
 
+/// <summary>
+/// Service responsible for logging UAV telemetry data to persistent storage.
+/// It uses the TelemetryDbContext to save TelemetryLog records.
+/// </summary>
 public class TelemetryLogger
 {
     private readonly TelemetryDbContext _context;
@@ -25,5 +29,3 @@ public class TelemetryLogger
         await _context.SaveChangesAsync();
     }
 }
-
-

@@ -1,5 +1,11 @@
-﻿namespace FalconOps.API.Services.Simulator;
+using System.ComponentModel.DataAnnotations;
 
+namespace FalconOps.API.Services.Simulator;
+
+/// <summary>
+/// Represents a single telemetry log entry stored in the database.
+/// Contains the state of the UAV at a specific point in time.
+/// </summary>
 public class TelemetryLog
 {
     public int Id { get; set; }

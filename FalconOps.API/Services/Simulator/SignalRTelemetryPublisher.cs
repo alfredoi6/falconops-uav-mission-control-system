@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.SignalR;
+using Microsoft.AspNetCore.SignalR;
 
 namespace FalconOps.API.Services.Simulator;
 
+/// <summary>
+/// Publishes telemetry data to connected clients using SignalR.
+/// This implementation sends UAVState updates to the TelemetryHub.
+/// </summary>
 public class SignalRTelemetryPublisher : ITelemetryPublisher
 {
     private readonly IHubContext<TelemetryHub> _hubContext;

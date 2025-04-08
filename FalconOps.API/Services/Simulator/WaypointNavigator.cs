@@ -1,5 +1,12 @@
-﻿namespace FalconOps.API.Services.Simulator;
+using FalconOps.DTOs.Map;
+using System;
 
+namespace FalconOps.API.Services.Simulator;
+
+/// <summary>
+/// Implements the logic for navigating a UAV between waypoints.
+/// Calculates the next UAV state based on a simple linear movement model.
+/// </summary>
 public class WaypointNavigator : IWaypointNavigator
 {
     private readonly List<Waypoint> _waypoints;

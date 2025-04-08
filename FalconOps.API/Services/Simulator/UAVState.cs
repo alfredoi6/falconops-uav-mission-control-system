@@ -1,6 +1,9 @@
-
 namespace FalconOps.API.Services.Simulator;
 
+/// <summary>
+/// Represents the state of a simulated Unmanned Aerial Vehicle (UAV) at a specific time.
+/// Includes properties like position, altitude, speed, battery level, etc.
+/// </summary>
 public class UAVState
 {
     public double Latitude { get; set; }
