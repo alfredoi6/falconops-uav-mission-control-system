@@ -1,3 +1,6 @@
+using FalconOps.API.Services.Simulator;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,9 +16,18 @@ builder.Services.AddCors(options =>
                       });
 });
 
+builder.Services.AddSignalR();
+
+builder.Services.AddDbContext<TelemetryDbContext>(options =>
+{
+    options.UseSqlite("Data Source=telemetry.db");
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHostedService<SimulatorHostedService>();
 
 var app = builder.Build();
 
