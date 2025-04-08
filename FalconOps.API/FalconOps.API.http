@@ -1,0 +1,6 @@
+@FalconOps.API_HostAddress = http://localhost:5189
+
+GET {{FalconOps.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,73 @@
+# C# / .NET
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+_Resharper*/
+*.resharper
+*.vs/
+.vs/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if you are using a solution-level packages folder
+#packages/
+# *.nuget.props is generated during the build process
+*.nuget.props
+*.nuget.targets
+
+# Visual Studio cache files
+*.cache
+*.ide
+*.VC.db
+*.VC.VC.opendb
+
+# Rider
+.idea/
+
+# User-specific files
+*.DS_Store
+*.swp
+Thumbs.db
+
+# Secrets and environment variables
+*.env
+appsettings.Development.json
+
+# Log files
+*.log
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+Build/
+build/.*
+Build/.*
+
+# Test results
+TestResults/
+*.VisualState.xml
+
+# Node.js / React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# React build output
+social-network-client/build/
+social-network-client/dist/
+
+# Optional: Other common ignores
+.vscode/
